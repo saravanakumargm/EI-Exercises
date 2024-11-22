@@ -1,11 +1,11 @@
-#**E-Commerce Cart System**
+# **E-Commerce Cart System**
 
-##**Problem Statement**
+## **Problem Statement**
 
  Develop a simple E-commerce cart system where users can add products to their cart, update quantities, and view the total bill. Products 
 should have attributes like name, price, and availability status
 
-##**Project Overview**
+## **Project Overview**
 
 This project implements a console-based E-Commerce Cart System with several advanced features:
 
@@ -17,7 +17,7 @@ This project implements a console-based E-Commerce Cart System with several adva
 
 * **Stock Management:** Ensure accurate stock levels are maintained. Adding items to the cart reduces stock, while removing items restores stock levels.Notify users when attempting to add items with insufficient stock.
 
-##**Project Structure**
+##- **Project Structure**
 
 1.  **Main.java**
 This file contains the entry point for the application. The Main class provides a console-based user interface for interacting with the E-Commerce Cart System. Users can perform actions such as viewing available products, adding items to the cart, updating quantities, applying discounts, and viewing the total bill. It serves as the central controller for invoking functionalities.
@@ -79,7 +79,7 @@ The Logger class is implemented as a Singleton to ensure only one instance exist
 * **Calculating totals.**
 
 
-##**How to Use the E-Commerce Cart System**
+## **How to Use the E-Commerce Cart System**
 
 * **Run the Application:** Run the Main.java file to launch the console-based interface.
 The program will display a list of available options.
@@ -103,7 +103,7 @@ Provide the product name to remove it entirely from the cart.The removed quantit
 
 * **Exit the Application:** Select the exit option to close the program.
 
-##**Design Patterns Used**
+## **Design Patterns Used**
 
 1. **Singleton Pattern:** 
 * Used in Logger to ensure only one instance of the Logger class exists throughout the application.Centralizes logging for all significant actions such as adding products, updating quantities, and applying discounts.
@@ -116,6 +116,6 @@ Allows cloning of Product objects when adding them to the cart, ensuring the imm
 4. **Composite Pattern:**
 Used In: CompositeDiscount. Combines multiple discount strategies into a single, stackable discount.Enables users to maximize savings by applying a sequence of discounts in a structured and maintainable manner.
 
-##**Summary**
+## **Summary**
 
 The E-Commerce Cart System is a console-based application that allows users to manage their shopping cart by adding, updating, and removing products while maintaining accurate stock levels. It supports multiple discount strategies, such as percentage-based and Buy One Get One Free, and ensures traceability through a centralized logging system. Built with design patterns like Singleton, Strategy, and Prototype, the system is modular, extensible, and user-friendly.

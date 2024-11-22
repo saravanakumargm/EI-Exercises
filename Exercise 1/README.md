@@ -17,7 +17,7 @@ This project implements a console-based E-Commerce Cart System with several adva
 
 * **Stock Management:** Ensure accurate stock levels are maintained. Adding items to the cart reduces stock, while removing items restores stock levels.Notify users when attempting to add items with insufficient stock.
 
-##- **Project Structure**
+## **Project Structure**
 
 1.  **Main.java**
 This file contains the entry point for the application. The Main class provides a console-based user interface for interacting with the E-Commerce Cart System. Users can perform actions such as viewing available products, adding items to the cart, updating quantities, applying discounts, and viewing the total bill. It serves as the central controller for invoking functionalities.
@@ -25,11 +25,11 @@ This file contains the entry point for the application. The Main class provides 
 2. **Product.java**
 This file defines the Product class, which represents individual products in the system. It uses the Prototype Pattern to allow cloning of product objects when adding them to the cart. Key attributes of the Product class include:
 
-  **Name:** The name of the product.
+    **Name:** The name of the product.
 
-  **Price:** The cost of the product.
+    **Price:** The cost of the product.
 
-  **Availability:** A boolean indicating whether the product is in stock.
+    **Availability:** A boolean indicating whether the product is in stock.
 
 This class provides the foundation for creating specialized product types and supports immutability during cart operations.
 

@@ -1,4 +1,4 @@
-package Structural;
+
 // Interface for Bank Account
 interface BankAccount {
     void withdraw(double amount);

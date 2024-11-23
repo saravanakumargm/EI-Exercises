@@ -1,4 +1,3 @@
-package Behavioral;
 //Memento class
 class TextEditorMemento {
     private String content;

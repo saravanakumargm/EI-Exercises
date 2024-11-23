@@ -1,5 +1,3 @@
-package Structural;
-
 // Subsystem 1: DVD Player
 class DvdPlayer {
     public void on() {

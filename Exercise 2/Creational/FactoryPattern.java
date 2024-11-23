@@ -1,5 +1,3 @@
-package Creational;
-
 // interface for Pizza
 interface Pizza {
     void prepare();  // Method to prepare the pizza

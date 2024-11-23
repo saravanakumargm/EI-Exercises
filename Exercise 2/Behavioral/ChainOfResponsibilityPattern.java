@@ -1,17 +1,17 @@
 package Behavioral;
 
 //Handler interface
-interface Approver {
-    void setNextApprover(Approver nextApprover);
+interface ApproverHandler {
+    void setNextApprover(ApproverHandler nextApprover);
     void approveRequest(ExpenseRequest request);
 }
 
 //Concrete handler classes
-class Manager implements Approver {
-    private Approver nextApprover;
+class ManagerHandler implements ApproverHandler {
+    private ApproverHandler nextApprover;
 
     @Override
-    public void setNextApprover(Approver nextApprover) {
+    public void setNextApprover(ApproverHandler nextApprover) {
         this.nextApprover = nextApprover;
     }
 
@@ -25,11 +25,11 @@ class Manager implements Approver {
     }
 }
 
-class Director implements Approver {
-    private Approver nextApprover;
+class DirectorHandler implements ApproverHandler {
+    private ApproverHandler nextApprover;
 
     @Override
-    public void setNextApprover(Approver nextApprover) {
+    public void setNextApprover(ApproverHandler nextApprover) {
         this.nextApprover = nextApprover;
     }
 
@@ -43,11 +43,11 @@ class Director implements Approver {
     }
 }
 
-class VicePresident implements Approver {
-    private Approver nextApprover;
+class VicePresidentHandler implements ApproverHandler {
+    private ApproverHandler nextApprover;
 
     @Override
-    public void setNextApprover(Approver nextApprover) {
+    public void setNextApprover(ApproverHandler nextApprover) {
         this.nextApprover = nextApprover;
     }
 
@@ -78,9 +78,9 @@ class ExpenseRequest {
 public class ChainOfResponsibilityPattern {
     public static void main(String[] args) {
         // Create approvers
-        Approver manager = new Manager();
-        Approver director = new Director();
-        Approver vicePresident = new VicePresident();
+        ApproverHandler manager = new ManagerHandler();
+        ApproverHandler director = new DirectorHandler();
+        ApproverHandler vicePresident = new VicePresidentHandler();
 
 
         manager.setNextApprover(director); // Set up the chain of responsibility

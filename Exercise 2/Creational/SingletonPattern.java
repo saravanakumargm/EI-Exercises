@@ -1,4 +1,3 @@
-package Creational;
 // Singleton Class: Logger
 class Logger {
     private static Logger instance;

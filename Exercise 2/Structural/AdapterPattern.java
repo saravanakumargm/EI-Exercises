@@ -1,5 +1,3 @@
-package Structural;
-
 // USB Type-B Interface
 interface UsbTypeB {
     void connectWithUsbTypeB();

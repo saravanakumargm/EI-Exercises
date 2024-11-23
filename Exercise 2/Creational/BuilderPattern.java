@@ -1,5 +1,3 @@
-package Creational;
-
 //Product class - Car
 class Car {
     private String engine;

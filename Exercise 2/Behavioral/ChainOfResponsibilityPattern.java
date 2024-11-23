@@ -1,5 +1,3 @@
-package Behavioral;
-
 //Handler interface
 interface ApproverHandler {
     void setNextApprover(ApproverHandler nextApprover);

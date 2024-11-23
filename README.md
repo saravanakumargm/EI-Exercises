@@ -1,7 +1,7 @@
 # Task Documentation
 This repository contains two exercises.
 
-## Exercise 1: Console based E-commerce cart system where users can add products to their cart, update quantities, and view the total bill. The system contains following features:
+## Exercise 1: Console based E-commerce cart system
 
 ### Overview
 The E-Commerce Cart System is a console-based application that allows users to manage their shopping cart by adding, updating, and removing products while maintaining accurate stock levels. It supports multiple discount strategies, such as percentage-based and Buy One Get One Free, and ensures traceability through a centralized logging system. Built with design patterns like Singleton, Strategy, and Prototype, the system is modular, extensible, and user-friendly.

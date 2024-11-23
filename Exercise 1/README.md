@@ -54,7 +54,7 @@ The StockManager class is responsible for managing the stock of products. It mai
 * **Displaying current stock levels.**
 This class prevents overselling by validating stock levels before cart operations.
 
-6. **DiscountStrategy.java**
+6. **DiscountStrategyInterface.java**
 
 This file contains the DiscountStrategy interface, which serves as the base for all discount strategies. It uses the Strategy Pattern to allow dynamic application of different discount types. The interface defines a single method:
 

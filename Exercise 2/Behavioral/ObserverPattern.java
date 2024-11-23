@@ -3,20 +3,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 // Observer
-interface Observer {
+interface FollowerObserver {
     void update(String post);
 }
 
 // Subject
-interface Subject {
-    void registerObserver(Observer observer);
-    void removeObserver(Observer observer);
+interface SocialMedia {
+    void registerObserver(FollowerObserver followerObserver);
+    void removeObserver(FollowerObserver followerObserver);
     void notifyObservers();
 }
 
 // Concrete Subject - SocialMediaAccount
-class SocialMediaAccount implements Subject {
-    private List<Observer> followers = new ArrayList<>();
+class SocialMediaAccount implements SocialMedia {
+    private List<FollowerObserver> followers = new ArrayList<>();
     private String post;
 
     public void addPost(String post) {
@@ -25,25 +25,25 @@ class SocialMediaAccount implements Subject {
     }
 
     @Override
-    public void registerObserver(Observer observer) {
-        followers.add(observer);
+    public void registerObserver(FollowerObserver followerObserver) {
+        followers.add(followerObserver);
     }
 
     @Override
-    public void removeObserver(Observer observer) {
-        followers.remove(observer);
+    public void removeObserver(FollowerObserver followerObserver) {
+        followers.remove(followerObserver);
     }
 
     @Override
     public void notifyObservers() {
-        for (Observer observer : followers) {
-            observer.update(post);
+        for (FollowerObserver followerObserver : followers) {
+            followerObserver.update(post);
         }
     }
 }
 
 // Concrete Observer - Follower
-class Follower implements Observer {
+class Follower implements FollowerObserver {
     private String followerName;
 
     public Follower(String followerName) {
@@ -61,18 +61,18 @@ public class ObserverPattern {
     public static void main(String[] args) {
         // Create a social media account and followers (observers)
         SocialMediaAccount account = new SocialMediaAccount();
-        Follower follower1 = new Follower("John");
-        Follower follower2 = new Follower("Alice");
+        Follower follower1 = new Follower("Saravana Kumar");
+        Follower follower2 = new Follower("Hari");
 
         // Register followers as observers
         account.registerObserver(follower1);
         account.registerObserver(follower2);
 
         // Add a new post (subject will notify observers)
-        account.addPost("Hello world! This is my first post!");  // Followers are notified
+        account.addPost("Hello, This is my first post!");  // Followers are notified
 
         // Another post, followers will be notified again
-        account.addPost("Just finished a new project! Check it out!");  // Followers are notified
+        account.addPost("Just finished a new project! Check it!");  // Followers are notified
     }
 }
 

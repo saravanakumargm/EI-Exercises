@@ -1,4 +1,8 @@
-//Memento class
+package Behavioral;
+
+import java.util.Stack;
+
+// Memento class
 class TextEditorMemento {
     private String content;
 
@@ -11,7 +15,7 @@ class TextEditorMemento {
     }
 }
 
-//Originator class
+// Originator class
 class TextEditor {
     private String content;
 
@@ -34,31 +38,36 @@ class TextEditor {
     }
 }
 
-//Caretaker class
+// Caretaker class
 class EditorHistory {
-    private TextEditorMemento memento;
+    private Stack<TextEditorMemento> mementos = new Stack<>();
 
     public void saveState(TextEditor editor) {
-        memento = editor.save();
+        mementos.push(editor.save());
     }
 
     public void restoreState(TextEditor editor) {
-        editor.restore(memento);
+        if (!mementos.isEmpty()) {
+            TextEditorMemento memento = mementos.pop();
+            editor.restore(memento);
+        } else {
+            System.out.println("No states to restore.");
+        }
     }
 }
 
-//Client
+// Client
 public class MomentoPattern {
     public static void main(String[] args) {
         TextEditor editor = new TextEditor();
         EditorHistory history = new EditorHistory();
 
-
+        // Set and save the first version
         editor.setContent("First version of the text.");
         System.out.println("Current Content: " + editor.getContent());
         history.saveState(editor);
 
-        // Add more content and save the state again
+        // Set and save the second version
         editor.setContent("Second version of the text.");
         System.out.println("Current Content: " + editor.getContent());
         history.saveState(editor);
@@ -76,10 +85,3 @@ public class MomentoPattern {
         System.out.println("After Restore Again: " + editor.getContent());
     }
 }
-
-/*
-In this code, the TextEditor class saves its content at different points, and the
-EditorHistory class manages the saved states. This pattern is useful for implementing
-undo/redo functionality, enabling the restoration of previous states without modifying
-the original object's implementation.
- */

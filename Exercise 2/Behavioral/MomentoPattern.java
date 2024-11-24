@@ -1,5 +1,3 @@
-package Behavioral;
-
 import java.util.Stack;
 
 // Memento class

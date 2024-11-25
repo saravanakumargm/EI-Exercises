@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Cart {
     private final Map<Product, Integer> items = new HashMap<>();
-    private DiscountStrategy discountStrategy;
+    private DiscountStrategyInterface discountStrategy;
     private final StockManager stockManager;
 
     public Cart(StockManager stockManager) {
@@ -46,7 +46,7 @@ public class Cart {
         }
     }
 
-    public void applyDiscountStrategy(DiscountStrategy discountStrategy) {
+    public void applyDiscountStrategy(DiscountStrategyInterface discountStrategy) {
         this.discountStrategy = discountStrategy;
     }
 

@@ -1,5 +1,5 @@
 
-public class BuyOneGetOneFreeDiscount implements DiscountStrategy {
+public class BuyOneGetOneFreeDiscount implements DiscountStrategyInterface {
     private final Product product;
     private final int quantity;
 

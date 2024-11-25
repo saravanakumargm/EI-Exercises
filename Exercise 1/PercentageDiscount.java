@@ -1,4 +1,4 @@
-public class PercentageDiscount implements DiscountStrategy {
+public class PercentageDiscount implements DiscountStrategyInterface {
     private final double percentage;
 
     public PercentageDiscount(double percentage) throws Exception {

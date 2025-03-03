@@ -99,8 +99,6 @@ Provide the product name to remove it entirely from the cart.The removed quantit
 
 * **Check Stock Levels:** View the current stock levels for all products.Ensure sufficient stock is available before adding items to the cart.
 
-* **Review Logs:** View the system logs to see a record of all significant actions, including task additions, updates, and discounts applied.
-
 * **Exit the Application:** Select the exit option to close the program.
 
 ## **Design Patterns Used**

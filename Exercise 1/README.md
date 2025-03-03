@@ -103,15 +103,12 @@ Provide the product name to remove it entirely from the cart.The removed quantit
 
 ## **Design Patterns Used**
 
-1. **Singleton Pattern:** 
-* Used in Logger to ensure only one instance of the Logger class exists throughout the application.Centralizes logging for all significant actions such as adding products, updating quantities, and applying discounts.
-
-2. **Prototype Pattern:** Used In: Product
+1. **Prototype Pattern:** Used In: Product
 Allows cloning of Product objects when adding them to the cart, ensuring the immutability of the original product data.Prevents direct modifications to the original product instances while maintaining consistency in the cart.
 
-3. **Strategy Pattern:** Used In: DiscountStrategy, PercentageDiscount, BuyOneGetOneFreeDiscount. Provides a flexible way to apply different discount strategies. Allows users to dynamically select or combine multiple strategies, such as percentage-based discounts or Buy One Get One Free offers.
+2. **Strategy Pattern:** Used In: DiscountStrategy, PercentageDiscount, BuyOneGetOneFreeDiscount. Provides a flexible way to apply different discount strategies. Allows users to dynamically select or combine multiple strategies, such as percentage-based discounts or Buy One Get One Free offers.
 
-4. **Composite Pattern:**
+3. **Composite Pattern:**
 Used In: CompositeDiscount. Combines multiple discount strategies into a single, stackable discount.Enables users to maximize savings by applying a sequence of discounts in a structured and maintainable manner.
 
 ## **Summary**

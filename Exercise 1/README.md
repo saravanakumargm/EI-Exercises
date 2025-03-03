@@ -70,14 +70,6 @@ This file implements the DiscountStrategy interface to provide a Buy One Get One
 9. **CompositeDiscount.java**
 The CompositeDiscount class combines multiple discount strategies using the Composite Pattern. It allows stacking of discounts, such as combining a percentage-based discount with a BOGO offer. Users can add multiple discount strategies, and the total discount is applied sequentially.
 
-10. **Logger.java**
-The Logger class is implemented as a Singleton to ensure only one instance exists throughout the application. It logs all significant actions performed in the system, such as:
-
-* **Adding products to the cart.**
-* **Updating or removing items.**
-* **Applying discounts.**
-* **Calculating totals.**
-
 
 ## **How to Use the E-Commerce Cart System**
 
@@ -113,4 +105,4 @@ Used In: CompositeDiscount. Combines multiple discount strategies into a single,
 
 ## **Summary**
 
-The E-Commerce Cart System is a console-based application that allows users to manage their shopping cart by adding, updating, and removing products while maintaining accurate stock levels. It supports multiple discount strategies, such as percentage-based and Buy One Get One Free, and ensures traceability through a centralized logging system. Built with design patterns like Singleton, Strategy, and Prototype, the system is modular, extensible, and user-friendly.
+The E-Commerce Cart System is a console-based application that allows users to manage their shopping cart by adding, updating, and removing products while maintaining accurate stock levels. It supports multiple discount strategies, such as percentage-based and Buy One Get One Free. Built with design patterns like Singleton, Strategy, and Prototype, the system is modular, extensible, and user-friendly.

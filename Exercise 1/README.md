@@ -11,7 +11,7 @@ This project implements a console-based E-Commerce Cart System with several adva
 
 * **Product Management:** Display a list of available products with attributes such as name, price, and stock availability.Ensure products are only added to the cart if sufficient stock is available.
 
-* **Cart Operations:** Users can add products to the cart, update quantities, and remove items..Products are cloned using the Prototype Pattern to maintain immutability of the original product data.
+* **Cart Operations:** Users can add products to the cart, update quantities, and remove items.
 
 * **Discount System:** Apply multiple discount strategies, such as percentage-based discounts or Buy One Get One Free offers, using the Strategy Pattern.Combine multiple discount strategies using the Composite Pattern for flexible discount management.
 

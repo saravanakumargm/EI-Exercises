@@ -25,7 +25,6 @@ public class Main {
         // Apply multiple discounts
         CompositeDiscount compositeDiscount = new CompositeDiscount();
         compositeDiscount.addDiscount(new PercentageDiscount(10)); // 10% off
-        compositeDiscount.addDiscount(new BuyOneGetOneFreeDiscount(headphones, 1)); // BOGO on headphones
 
         cart.applyDiscountStrategy(compositeDiscount);
 
